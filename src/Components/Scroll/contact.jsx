@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
 
-const Form = styled.form`
+const FormStyled = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,13 +22,13 @@ function Contact() {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <Form>
+    <FormStyled>
       <form action="" onSubmit={handleSubmit(onSubmit)}>
         <input type="text" />
         <input type="text" />
         <input type="submit" />
       </form>
-    </Form>
+    </FormStyled>
   );
 }
 

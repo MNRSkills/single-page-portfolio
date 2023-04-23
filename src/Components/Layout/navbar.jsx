@@ -1,10 +1,8 @@
-// q: what is the path to styles?
-
-// a:
 import React from "react";
 import styled from "styled-components";
 
 const Nav = styled.nav`
+  grid-area: nav;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +13,8 @@ const Nav = styled.nav`
 
 const List = styled.ul`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 50%;
   height: 100vh;
@@ -27,20 +26,37 @@ const List = styled.ul`
   }
 `;
 
+const Logo = styled.div`
+  background-image: url("https://i.imgur.com/1Q1Z1Zm.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+`;
+
 const Navbar = () => {
   return (
     <Nav>
       <List>
-        <ul className="list-wrapper">
-          <li>Home</li>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </ul>
+        <li>
+          {" "}
+          <a href="#intro">Intro</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
+          <a href="#project">Project</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </List>
-
-      <img src="logo.png" alt="Logo" />
+      <Logo />
     </Nav>
   );
 };
