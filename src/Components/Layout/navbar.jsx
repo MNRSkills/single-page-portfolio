@@ -1,39 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-
-const Nav = styled.nav`
-  grid-area: nav;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #000;
-  color: #fff;
-  padding: 0.5rem 1rem;
-`;
-
-const List = styled.ul`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 100vh;
-  li {
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    list-style: none;
-    font-size: 2.5rem;
-  }
-`;
-
-const Logo = styled.div`
-  background-image: url("https://i.imgur.com/1Q1Z1Zm.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 400px;
-  height: 400px;
-`;
+import { Nav, List, Logo } from "../styled /StyledNav";
 
 const Navbar = () => {
   return (
@@ -41,22 +7,34 @@ const Navbar = () => {
       <List>
         <li>
           {" "}
-          <a href="#intro">Intro</a>
+          <a href="#intro">
+            <h1>Intro</h1>
+          </a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="#abo">
+            <h1>About</h1>
+          </a>
         </li>
         <li>
-          <a href="#skills">Skills</a>
+          <a href="#skills">
+            <h1>Skills</h1>
+          </a>
         </li>
         <li>
-          <a href="#project">Project</a>
+          <a href="#pro">
+            <h1>Projects</h1>
+          </a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact">
+            <h1>Contact</h1>
+          </a>
         </li>
       </List>
-      <Logo />
+      <div>
+        <Logo />
+      </div>
     </Nav>
   );
 };

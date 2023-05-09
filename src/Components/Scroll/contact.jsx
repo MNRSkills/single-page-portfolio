@@ -1,6 +1,7 @@
 // create  a arrow commponent called contact
 import React from "react";
 import styled from "styled-components";
+import { StyledComponent } from "../styled /sectionStyled";
 import { useForm } from "react-hook-form";
 
 const FormStyled = styled.form`
@@ -22,13 +23,15 @@ function Contact() {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <FormStyled>
+    <StyledComponent id="contact">
+    <FormStyled >
       <form action="" onSubmit={handleSubmit(onSubmit)}>
         <input type="text" />
         <input type="text" />
         <input type="submit" />
       </form>
-    </FormStyled>
+      </FormStyled>
+    </StyledComponent>
   );
 }
 

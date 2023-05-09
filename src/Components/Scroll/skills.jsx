@@ -1,43 +1,19 @@
 //  create a arrow commponent called skills
 import React from "react";
-import styled from "styled-components";
-
-const SkillCoStyled = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  margin: 2rem;
-`;
-
-const SkillsStyled = styled.div`
-  border: 1px solid #fff;
-  margin: 2rem;
-  padding: 0.5rem 1rem;
-  background-color: #916f6d;
-  h2 {
-    font-size: 2.5rem;
-    color: #fff;
-    padding: 10px;
-  }
-`;
-
-const SkillList = styled.ul`
-  width: 50%;
-  li {
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1rem;
-  }
-`;
+import {
+  SkillCoStyled,
+  SkillsStyled,
+  SkillList,
+} from "../styled /StyledSkills";
+import { HeaderStyled } from "../styled /StyledMain";
 
 const Skills = () => {
   return (
-    <SkillCoStyled>
-      <h2>My Skills</h2>
-      <p>Always learning and growing</p>
+    <SkillCoStyled id="skills">
+      <HeaderStyled>
+        <h2>My Skills</h2>
+        <p>Always learning and growing</p>
+      </HeaderStyled>
 
       <SkillsStyled>
         <h2>Techinical Skills</h2>
@@ -53,30 +29,32 @@ const Skills = () => {
       </SkillsStyled>
       <SkillsStyled>
         <h2>Soft Skills</h2>
-        {/* customer service */}
-        {/* problem solving */}
-        {/* communication */}
-        {/* teamwork */}
-        {/* adaptability */}
-        {/* work ethic */}
+        <SkillList>
+          <li>Customer Service</li>
+          <li>Problem Solving</li>
+          <li>Communication</li>
+          <li>Teamwork</li>
+          <li>Adaptability</li>
+          <li>Work Ethic</li>
+        </SkillList>
         {/* interpersonal skills */}
         {/* time management */}
         {/* cost efficiency */}
       </SkillsStyled>
       <SkillsStyled>
         <h2>Certifications</h2>
-        {/* CompTIA A+ */}
-        {/* Coding Bootcamp */}
-        {/* John Hopkins  */}
-        {/* Google IT Cert */}
-
+        <SkillList>
+          <li>CompTIA A+</li>
+          <li>Google IT Cert</li>
+          <li>John Hopkins</li>
+          <li>Bottega Full Stack Coding Bootcamp</li>
+        </SkillList>
       </SkillsStyled>
       <SkillsStyled>
         <h2>Toolset</h2>
         {/* outlook */}
         {/* office 365 also known as microsoft 365 */}
         {/* slack */}
-        
       </SkillsStyled>
     </SkillCoStyled>
   );

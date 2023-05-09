@@ -1,37 +1,15 @@
 // q: create a arrow commponent called intro
 // a:
 import React from "react";
-import styled from "styled-components";
+import { HeaderStyled } from "../styled /StyledMain";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { fa1 } from "@fortawesome/free-solid-svg-icons";
 
-const IntroStyled = styled.div`
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  h2 {
-    font-size: 2rem;
-    color: #aecde8;
-
-    @media (max-width: 768px) {
-      font-size: 1.5rem;
-    }
-  }
-  p {
-    font-size: 1.5rem;
-    color: #999c97;
-
-    @media (max-width: 768px) {
-      font-size: 1rem;
-    }
-  }
-`;
 
 const Intro = () => {
   return (
-    <IntroStyled>
+    <HeaderStyled id="intro">
       {/* <FontAwesomeIcon icon={fa1} />  <span></span> */}
       <h2>
         Proven IT support technician, supporting Windows, IOS, and various
@@ -50,7 +28,7 @@ const Intro = () => {
         consequatur aliquam? Molestias molestiae sequi quam nisi, aspernatur
         ducimus harum?
       </p>
-    </IntroStyled>
+    </HeaderStyled>
   );
 };
 
