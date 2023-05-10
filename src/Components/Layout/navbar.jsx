@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, List, Logo } from "../styled /StyledNav";
+import { Nav, List } from "../styled /StyledNav";
 
 const Navbar = () => {
   return (
@@ -32,9 +32,6 @@ const Navbar = () => {
           </a>
         </li>
       </List>
-      <div>
-        <Logo />
-      </div>
     </Nav>
   );
 };

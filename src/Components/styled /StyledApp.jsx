@@ -4,11 +4,32 @@ export const AppStyled = styled.div`
   text-align: center;
   margin: 0;
   display: grid;
-  grid-template-areas: "branding branding branding branding" "nav nav nav main";
+  grid-template-areas: "branding branding branding branding" "nav logo main main";
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1rem;
+  background-color: #1a1a1a;
 
+  @media (max-width: 820px) {
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+      
+
+  }
   @media (max-width: 658px) {
-    display: grid;
-    grid-template-column: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  @media (max-width: 1008px) {
+    // q: show me a grid area way of layout 
+
   }
 `;
 
@@ -43,7 +64,10 @@ export const Main = styled.div`
     }
   }
 
- 
+  @media (max-width: 820px) {
+    padding: 40px 0;
+
+
 
 }`;
 
@@ -76,6 +100,23 @@ export const Line = styled.div`
     right: 0;
     background-color: #aecde8;
   }
+
+  @media (max-width: 820px) {
+    width: 100%;
+    height: 2px;
+    position: relative;
+  }
+
+  @media (max-width: 858px) {
+    ::after,
+  ::before {
+    content: " ";
+    margin: auto;
+    width: 40%;
+    height: 2px;
+    position: absolute;
+  }
+    
 `;
 
 

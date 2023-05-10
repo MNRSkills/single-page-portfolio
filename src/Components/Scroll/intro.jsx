@@ -1,16 +1,20 @@
 // q: create a arrow commponent called intro
 // a:
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { HeaderStyled } from "../styled /StyledMain";
+import { Logo } from "../styled /StyledNav";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { fa1 } from "@fortawesome/free-solid-svg-icons";
 
-
-
 const Intro = () => {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setCount(window.innerWidth);
+    });
+  }, [count]);
   return (
     <HeaderStyled id="intro">
-      {/* <FontAwesomeIcon icon={fa1} />  <span></span> */}
       <h2>
         Proven IT support technician, supporting Windows, IOS, and various
         mobile management softwares
@@ -20,14 +24,9 @@ const Intro = () => {
         adipisci similique ipsam provident eos delectus ducimus, ad repellat sed
         libero hic perferendis cumque quas reiciendis neque non est maxime!
         Asperiores suscipit optio distinctio! Optio asperiores modi excepturi
-        qui inventore! Ducimus nam, enim inventore est earum totam, quidem
-        reprehenderit asperiores porro suscipit culpa dolorum quos blanditiis
-        rerum fuga beatae possimus. Rem molestiae maxime quaerat magnam
-        exercitationem, ratione reiciendis saepe laudantium minus nostrum
-        accusantium vero quos tenetur obcaecati, nisi similique aspernatur,
-        consequatur aliquam? Molestias molestiae sequi quam nisi, aspernatur
-        ducimus harum?
       </p>
+
+      {821 > count ? <Logo /> : null}
     </HeaderStyled>
   );
 };

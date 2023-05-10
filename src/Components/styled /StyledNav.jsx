@@ -5,9 +5,16 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000;
-  color: #fff;
   padding: 0.5rem 2rem;
+
+  @media (max-width: 1008px) {
+    padding: 0;
+    background: green;
+
+    ul {
+      padding: 0;
+    }
+  }
 `;
 
 export const List = styled.ul`
@@ -15,41 +22,45 @@ export const List = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 100vh;
+  width: 100%;
   padding: 0.5rem 2rem;
   li {
-    padding: 0.5rem 1rem;
     cursor: pointer;
     list-style: none;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   a {
-    text-decoration: none;
     color: #aecde8;
-  }
-  @media (max-width: 768px) { 
-    display: none;
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-color: #c58af9;
+    }
+    &:active {
+      color: #c58af9;
+    }
   }
 
+  @media (max-width: 768px) {
+    background-color: red;
+  }
 `;
 
-
-export const HeadWrap = styled.div`
-
-`;
+// export const HeadWrap = styled.div``;
 
 export const Logo = styled.div`
+  grid-area: logo;
   background-image: url("https://res.cloudinary.com/mackr/image/upload/v1674367278/uvmytvwlvldwj15c0l8h.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   border-radius: 5%;
-  
-  width: 400px;
-  height: 500px;
-  ::before {
+
+  width: 300px;
+  height: 400px;
+  ::before, ::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -58,13 +69,23 @@ export const Logo = styled.div`
 
     transform: translate(-15px, 15px);
     border-radius: 5%;
+  }
 
+  @media (max-width: 1008px) {
+    width: 200px; 
+    height: 250px;
+    z-index: 1;
+    order: 2
+    position: relative;
   }
 
   @media (max-width: 768px) {
     width: 300px;
     height: 350px;
-    position: absolute;
   }
 
+  @media (max-width: 1080px) {
+    width: 200px;
+    height: 250px;
+  }
 `;
