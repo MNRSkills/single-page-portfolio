@@ -1,9 +1,10 @@
 import React from "react";
 import { Nav, List } from "../styled /StyledNav";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  console.log(props);
   return (
-    <Nav>
+    <Nav onClick={() => props.toggle()}>
       <List>
         <li>
           {" "}

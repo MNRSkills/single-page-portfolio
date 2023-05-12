@@ -9,12 +9,18 @@ export const Nav = styled.nav`
 
   @media (max-width: 1008px) {
     padding: 0;
-    background: green;
+    
 
     ul {
       padding: 0;
     }
   }
+
+  @media (max-width: 820px) {
+    padding: 0;
+    width: 100%;
+    background: #1a1a1a;
+    font-size: .4rem;
 `;
 
 export const List = styled.ul`
@@ -43,7 +49,7 @@ export const List = styled.ul`
   }
 
   @media (max-width: 768px) {
-    background-color: red;
+    
   }
 `;
 
@@ -89,3 +95,26 @@ export const Logo = styled.div`
     height: 250px;
   }
 `;
+
+export const ResponsiveNav = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  width: 100%;
+  background: #1a1a1a;
+  color: #1a1a1a;
+
+  h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: #aecde8;
+    margin-left: 1.5rem;
+  }
+
+  .icon {
+    margin-right: 2.5rem;
+    color: #fff;
+  }
+
+  `;

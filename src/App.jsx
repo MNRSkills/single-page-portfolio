@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "./Components/Layout/navbar";
-import { Logo } from "./Components/styled /StyledNav";
+import { Logo, ResponsiveNav } from "./Components/styled /StyledNav";
 import About from "./Components/Scroll/about";
 import Skill from "./Components/Scroll/skills";
 import Projects from "./Components/Scroll/projects";
@@ -15,7 +15,7 @@ import {
   fa3,
   fa4,
   fa5,
-  faEllipsis,
+  faEllipsisVertical,
 } from "@fortawesome/free-solid-svg-icons";
 
 // styled components
@@ -30,7 +30,6 @@ import {
 function App() {
   const [count, setCount] = useState(0);
   const [navTog, setNavTog] = useState(false);
-  console.log(count);
 
   const togEllip = () => {
     console.log("clicked");
@@ -38,7 +37,6 @@ function App() {
   };
 
   useEffect(() => {
-    // window.addEventListener("click", togEllip);
     window.addEventListener("resize", () => {
       setCount(window.innerWidth);
     });
@@ -46,13 +44,22 @@ function App() {
 
   return (
     <AppStyled>
-      {/* Verical navbar with Image stationary */}
-      {820 < count | navTog == true ? (
-        <Navbar />
+      {/* Verical navbar with Image stationary used for dropdown  */}
+      {(821 < count) | navTog ? (
+        <Navbar toggle={togEllip} />
       ) : (
-        <FontAwesomeIcon icon={faEllipsis} size="2xl" onClick={togEllip} />
+        <ResponsiveNav>
+          <h1>MNRDev</h1>
+          <div className="icon">
+            <FontAwesomeIcon
+              icon={faEllipsisVertical}
+              size="2xl"
+              onClick={togEllip}
+            />
+          </div>
+        </ResponsiveNav>
       )}
-      {820 < count ? <Logo /> : null}
+      {821 < count ? <Logo /> : null}
       {/* Main content area */}
       <Main>
         <Section>

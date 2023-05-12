@@ -1,11 +1,13 @@
 //  create a arrow commponent called skills
 import React, { useState, useEffect } from "react";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import {
   SkillCoStyled,
   SkillsStyled,
   SkillList,
 } from "../styled /StyledSkills";
 import { HeaderStyled } from "../styled /StyledMain";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Skills = () => {
   const [techDropDown, setTechDropDown] = useState(false);
@@ -40,14 +42,13 @@ const Skills = () => {
     //     console.log("goodbye")
     // )
     // }
-
-  //   const timer = setTimeout(() => {
-  //     setTechDropDown(false);
-  //     setSoftDropDown(false);
-  //     setCertDropDown(false);
-  //     setToolDropDown(false);
-  //   }, 2500);
-  //   return () => clearTimeout(timer);
+    //   const timer = setTimeout(() => {
+    //     setTechDropDown(false);
+    //     setSoftDropDown(false);
+    //     setCertDropDown(false);
+    //     setToolDropDown(false);
+    //   }, 2500);
+    //   return () => clearTimeout(timer);
   }, [techDropDown, softDropDown, certDropDown, toolDropDown]);
 
   return (
@@ -59,7 +60,13 @@ const Skills = () => {
 
       <SkillsStyled>
         <h2>Techinical Skills</h2>
-        <button onClick={techToggle}>See More</button>
+        <button onClick={techToggle}>
+          {techDropDown ? (
+            <FontAwesomeIcon icon={faChevronUp} />
+          ) : (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )}
+        </button>
         {techDropDown ? (
           <SkillList>
             <li>HTML</li>
@@ -73,7 +80,13 @@ const Skills = () => {
       </SkillsStyled>
       <SkillsStyled>
         <h2>Soft Skills</h2>
-        <button onClick={softToggle}>See More</button>
+        <button onClick={softToggle}>
+          {softDropDown ? (
+            <FontAwesomeIcon icon={faChevronUp} />
+          ) : (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )}
+        </button>
         {softDropDown ? (
           <SkillList>
             <li>Customer Service</li>
@@ -87,7 +100,13 @@ const Skills = () => {
       </SkillsStyled>
       <SkillsStyled>
         <h2>Certifications</h2>
-        <button onClick={certToggle}>See More</button>
+        <button onClick={certToggle}>
+          {certDropDown ? (
+            <FontAwesomeIcon icon={faChevronUp} />
+          ) : (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )}
+        </button>
         {certDropDown ? (
           <SkillList>
             <li>CompTIA A+</li>
@@ -99,7 +118,13 @@ const Skills = () => {
       </SkillsStyled>
       <SkillsStyled>
         <h2>Toolset</h2>
-        <button onClick={toolToggle}>See More</button>
+        <button onClick={toolToggle}>
+          {toolDropDown ? (
+            <FontAwesomeIcon icon={faChevronUp} />
+          ) : (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )}
+        </button>
         {toolDropDown ? (
           <SkillList>
             <li>Git</li>

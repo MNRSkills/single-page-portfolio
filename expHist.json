@@ -1,0 +1,37 @@
+{
+  "work_history": [
+    {
+      "company": "TekSystems",
+      "position": "IT Support Specialist",
+      "start_date": "07-2022",
+      "end_date": "05-2023",
+      "responsibilities": [
+        "Designed and implemented new features for the company's web application.",
+        "Collaborated with team members to resolve technical issues and improve overall code quality.",
+        "Participated in code reviews to ensure adherence to coding standards and best practices."
+      ]
+    },
+    {
+      "company": "Milestone Technologies Inc.",
+      "position": "Desktop Support Technician",
+      "start_date": "04-2021",
+      "end_date": "07-2022",
+      "responsibilities": [
+        "Lead a team of developers in the design and implementation of a new software product.",
+        "Work closely with product managers to define requirements and prioritize tasks.",
+        "Mentor junior team members to improve their technical skills and career growth."
+      ]
+    },
+    {
+      "company": "Security Industries Specialists, Inc.",
+      "position": "SOC Operator",
+      "start_date": "12-2019",
+      "end_date": "04-2021",
+      "responsibilities": [
+        "Lead a team of developers in the design and implementation of a new software product.",
+        "Work closely with product managers to define requirements and prioritize tasks.",
+        "Mentor junior team members to improve their technical skills and career growth."
+      ]
+    }
+  ]
+}

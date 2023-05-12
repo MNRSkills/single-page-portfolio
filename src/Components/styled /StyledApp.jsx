@@ -15,7 +15,7 @@ export const AppStyled = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    width: 100%;
 
       
 
@@ -28,6 +28,7 @@ export const AppStyled = styled.div`
 
   }
   @media (max-width: 1008px) {
+    width: 100%;
     // q: show me a grid area way of layout 
 
   }
@@ -35,7 +36,7 @@ export const AppStyled = styled.div`
 
 export const Main = styled.div`
   grid-area: main;
-  padding: 1rem;
+  padding-top: 1rem;
   background-color: #1a1a1a;
   height: 100vh;
   overflow-y: scroll;
@@ -51,22 +52,18 @@ export const Main = styled.div`
     color: #aecde8;
     @media (max-width: 768px) {
       font-size: 2rem;
+      width: 100%;
     }
   }
   
   h2 {
     font-size: 2rem;
     color: #aecde8;
-
-    @media (max-width: 768px) {
-
-      font-size: 1.5rem;
-    }
   }
 
   @media (max-width: 820px) {
     padding: 40px 0;
-
+    width: 100%;
 
 
 }`;
