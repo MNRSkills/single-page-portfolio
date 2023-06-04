@@ -1,38 +1,52 @@
 import React from "react";
-import { Nav, List } from "../styled /StyledNav";
+import { Link, animateScroll as scroll } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { Nav, List, Logo, ListWrapper } from "../styled /StyledNav";
 
-const Navbar = (props) => {
-  console.log(props);
+const Navbar = ({ toggle, sticky, logo }) => {
+  console.log(sticky, "sticky from navbar");
   return (
-    <Nav onClick={() => props.toggle()}>
+    //q: how to write a conditional statement in styled components?`
+    //a: use ternary operator
+
+    <Nav onClick={() => toggle()} isSticky={sticky}>
+      {/* <ListWrapper isSticky={sticky}> */}
+      <div className="branding">
+        {821 < logo ? <FontAwesomeIcon icon={faXmark} /> : null}
+        <h1>MNRDev</h1>
+        <h4>full-stack developer</h4>
+      </div>
       <List>
         <li>
           {" "}
-          <a href="#intro">
+          <Link to="intro" spy={true} smooth={true} offset={-50}>
             <h1>Intro</h1>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#abo">
+          <Link to="abo" spy={true} smooth={true} offset={-50}>
             <h1>About</h1>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#skills">
+          <Link to="skills" spy={true} smooth={true} offset={-50}>
             <h1>Skills</h1>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#pro">
+          <Link to="pro" spy={true} smooth={true} offset={-50}>
             <h1>Projects</h1>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#contact">
+          <Link to="contact" spy={true} smooth={true} offset={-50}>
             <h1>Contact</h1>
-          </a>
+          </Link>
         </li>
       </List>
+      {821 < logo ? <Logo /> : null}
+      {/* </ListWrapper> */}
     </Nav>
   );
 };

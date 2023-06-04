@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const About = () => {
   return (
-    <StyledComponent id="abo">
+    <StyledComponent>
       <HeaderStyled>
         <h2>
           Two years experience in the field of IT Support. I have worked on

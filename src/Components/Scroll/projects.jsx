@@ -8,7 +8,7 @@ import { WorkHistoryStyled } from "../styled /StyledExp";
 const Projects = () => {
   return (
     <>
-      <HeaderStyled id="pro">
+      <HeaderStyled >
         <h1>Experience</h1>
         <h2>This is no good because what projects do I have to speak about</h2>
         <p>

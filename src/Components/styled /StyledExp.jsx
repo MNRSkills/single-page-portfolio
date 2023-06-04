@@ -67,12 +67,16 @@ export const JobContainer = styled.div`
 
     @media (max-width: 768px) {
         font-size: 1rem;
+        
     }
 
   }
   @media (max-width: 390px) {
+    width: 70%;
     h2{
-      font-size: 1.5rem;
-
+      font-size: 1.2rem;
+      ::after {
+        left:2%;
+      }
     }
 `;

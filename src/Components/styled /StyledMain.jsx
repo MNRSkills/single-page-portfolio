@@ -8,6 +8,9 @@ export const HeaderStyled = styled.div`
   padding: 0.5rem 1rem;
   margin: 2rem;
 
+  @media (max-width: 1008px) {
+    position: sticky;
+
   h2 {
     font-size: 2rem;
     color: #aecde8;
@@ -25,4 +28,3 @@ export const HeaderStyled = styled.div`
     }
   }
 `;
-

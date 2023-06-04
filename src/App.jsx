@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import useSticky from "./hooks/useSticky";
 import Navbar from "./Components/Layout/navbar";
 import { Logo, ResponsiveNav } from "./Components/styled /StyledNav";
 import About from "./Components/Scroll/about";
@@ -28,11 +29,12 @@ import {
 } from "./Components/styled /StyledApp";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(window.innerWidth);
   const [navTog, setNavTog] = useState(false);
+  const { isSticky } = useSticky();
 
+  // toggle for ellipsis icon on mobile
   const togEllip = () => {
-    console.log("clicked");
     setNavTog(!navTog);
   };
 
@@ -43,10 +45,10 @@ function App() {
   }, []);
 
   return (
-    <AppStyled>
+    <AppStyled stick={isSticky}>
       {/* Verical navbar with Image stationary used for dropdown  */}
       {(821 < count) | navTog ? (
-        <Navbar toggle={togEllip} />
+        <Navbar toggle={togEllip} sticky={isSticky} logo={count} />
       ) : (
         <ResponsiveNav>
           <h1>MNRDev</h1>
@@ -59,18 +61,18 @@ function App() {
           </div>
         </ResponsiveNav>
       )}
-      {821 < count ? <Logo /> : null}
+
       {/* Main content area */}
-      <Main>
-        <Section>
+      <Main stick={isSticky}>
+        <Section id="intro">
           <Line>
             <FaWrapper>
               <FontAwesomeIcon icon={fa1} />
             </FaWrapper>
           </Line>
-          <Intro onClick={togEllip} />
+          <Intro onClick={togEllip} count={count} />
         </Section>
-        <Section>
+        <Section id="abo">
           <Line>
             <FaWrapper>
               <FontAwesomeIcon icon={fa2} />
@@ -78,7 +80,7 @@ function App() {
           </Line>
           <About />
         </Section>
-        <Section>
+        <Section id="skills">
           <Line>
             <FaWrapper>
               <FontAwesomeIcon icon={fa3} />
@@ -86,7 +88,7 @@ function App() {
           </Line>
           <Skill />
         </Section>
-        <Section>
+        <Section id="pro">
           <Line>
             <FaWrapper>
               <FontAwesomeIcon icon={fa4} />
@@ -94,7 +96,7 @@ function App() {
           </Line>
           <Projects />
         </Section>
-        <Section>
+        <Section id="contact">
           <Line>
             <FaWrapper>
               <FontAwesomeIcon icon={fa5} />

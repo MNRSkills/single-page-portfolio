@@ -52,7 +52,7 @@ const Skills = () => {
   }, [techDropDown, softDropDown, certDropDown, toolDropDown]);
 
   return (
-    <SkillCoStyled id="skills">
+    <SkillCoStyled >
       <HeaderStyled>
         <h2>My Skills</h2>
         <p>Always learning and growing</p>

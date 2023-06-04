@@ -1,53 +1,39 @@
 import styled from "styled-components";
 
 export const AppStyled = styled.div`
-  text-align: center;
-  margin: 0;
-  display: grid;
-  grid-template-areas: "branding branding branding branding" "nav logo main main";
-  justify-content: center;
-  align-items: center;
-  grid-gap: 1rem;
   background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
 
   @media (max-width: 820px) {
-   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
-      
-
-  }
-  @media (max-width: 658px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-  }
-  @media (max-width: 1008px) {
     width: 100%;
-    // q: show me a grid area way of layout 
-
   }
+  // @media (max-width: 658px) {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+
+  // }
+  // @media (max-width: 1008px) {
+  //   width: 100%;
+  //   // q: show me a grid area way of layout
+
+  // }
 `;
 
 export const Main = styled.div`
-  grid-area: main;
-  padding-top: 1rem;
+  width: 75%;
+  padding-top: 7rem;
   background-color: #1a1a1a;
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
+ ${({ stick }) => console.log(stick, "From Main styled")};
   h1 {
-    grid-area: branding;
     font-size: 3rem;
     color: #aecde8;
     @media (max-width: 768px) {
@@ -64,16 +50,20 @@ export const Main = styled.div`
   @media (max-width: 820px) {
     padding: 40px 0;
     width: 100%;
-
+  }
 
 }`;
-
-
 
 export const Section = styled.section`
   text-align: center;
   margin: 0;
   padding: 1rem;
+
+  @media (max-width: 820px) {
+    padding: 0;
+    width: 100%;
+    margin-top: 7rem;
+  }
 `;
 
 export const Line = styled.div`
@@ -115,7 +105,6 @@ export const Line = styled.div`
   }
     
 `;
-
 
 export const FaWrapper = styled.span`
   border-radius: 50%;

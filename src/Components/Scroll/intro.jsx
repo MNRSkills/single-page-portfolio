@@ -1,20 +1,14 @@
 // q: create a arrow commponent called intro
 // a:
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { HeaderStyled } from "../styled /StyledMain";
 import { Logo } from "../styled /StyledNav";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { fa1 } from "@fortawesome/free-solid-svg-icons";
 
-const Intro = () => {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setCount(window.innerWidth);
-    });
-  }, [count]);
+const Intro = ({ count }) => {
   return (
-    <HeaderStyled id="intro">
+    <HeaderStyled>
       <h2>
         Proven IT support technician, supporting Windows, IOS, and various
         mobile management softwares
