@@ -102,21 +102,14 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_vorir9k",
-        "template_cov4jk1",
-        form.current,
-        "bjk5V2SNQ48l4t1zj"
-      )
-      .then(
-        (result) => {
-          console.log(result);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm("", "", form.current, "").then(
+      (result) => {
+        console.log(result);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   return (
