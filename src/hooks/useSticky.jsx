@@ -3,10 +3,9 @@ import React, { useState, useEffect, useRef } from "react";
 const useSticky = () => {
   const [isSticky, setSticky] = useState(false);
   // const element = useRef(null);
-  console.log(isSticky, "state from useSticky");
 
   const handleScroll = () => {
-    console.log("THIS IS REF ELEMENT", window.scrollY);
+    // console.log("THIS IS REF ELEMENT", window.scrollY);
     window.scrollY > 10 ? setSticky(true) : setSticky(false);
   };
 

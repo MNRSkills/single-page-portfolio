@@ -5,7 +5,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Nav, List, Logo, ListWrapper } from "../styled /StyledNav";
 
 const Navbar = ({ toggle, sticky, logo }) => {
-  console.log(sticky, "sticky from navbar");
+  // console.log(sticky, "sticky from navbar");
   return (
     //q: how to write a conditional statement in styled components?`
     //a: use ternary operator

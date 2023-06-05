@@ -32,7 +32,7 @@ export const Main = styled.div`
   padding-top: 7rem;
   background-color: #1a1a1a;
 
- ${({ stick }) => console.log(stick, "From Main styled")};
+
   h1 {
     font-size: 3rem;
     color: #aecde8;

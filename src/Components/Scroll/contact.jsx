@@ -98,9 +98,14 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
+  const textarea = useRef(null);
+  const nameField = useRef(null);
+  const emailField = useRef(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    // console.log("THE CURRENT REF", reference.current.value);
+    console.log("THE FORM REF", form.current);
 
     emailjs.sendForm("", "", form.current, "").then(
       (result) => {
@@ -110,21 +115,25 @@ const Contact = () => {
         console.log(error.text);
       }
     );
+
+    nameField.current.value = "";
+    emailField.current.value = "";
+    textarea.current.value = "";
   };
 
   return (
     <>
       <FormStyled ref={form} onSubmit={sendEmail}>
         <div className="field-wrapper">
-          <input type="text" name="user_name" />
+          <input type="text" name="user_name" ref={nameField} />
           <label>Name</label>
         </div>
         <div className="field-wrapper">
-          <input type="email" name="user_email" />
+          <input type="email" name="user_email" ref={emailField} />
           <label>Email</label>
         </div>
         <div className="field-wrapper">
-          <textarea name="message" />
+          <textarea name="message" ref={textarea} />
           <label>Message</label>
         </div>
         <button type="submit" value="Send">
