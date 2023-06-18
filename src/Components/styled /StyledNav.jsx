@@ -1,18 +1,17 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-
   width: 50%;
   height: 100%;
   display: grid;
   grid-template-areas: "branding branding branding" "list . img";
   align-items: center;
-  
-  // work on these styles on  how to 
+
+  // work on these styles on  how to
   // make the nav bar sticky
   position: sticky;
   ${({ isSticky }) => isSticky && " left: 0;"};
- 
+
   top: 0;
 
   .branding {
@@ -22,17 +21,14 @@ export const Nav = styled.nav`
     h1 {
       font-size: 4rem;
       color: #aecde8;
-      
     }
     h4 {
       font-size: 1.5rem;
       color: white;
-
-    } 
+    }
   }
-// TESTING FOR RESPONSIVE NAV
+  // TESTING FOR RESPONSIVE NAV
   @media (max-width: 1008px) {
-   
   }
 
   // THIS IS RESPONSIVE NAV ACTUAL
@@ -43,7 +39,7 @@ export const Nav = styled.nav`
     background: #1a1a1a;
     z-index: 2;
 
-    .branding{
+    .branding {
       margin-top: 0;
     }
 
@@ -51,6 +47,11 @@ export const Nav = styled.nav`
       margin-top: 20px;
       font-size: 2rem;
     }
+  }
+
+  @media (max-width: 392px) {
+    padding: 0;
+  }
 `;
 
 export const ListWrapper = styled.div`
@@ -138,7 +139,7 @@ export const Logo = styled.div`
   }
 `;
 
-export const ResponsiveNav = styled.div`
+export const ResponsiveNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -157,5 +158,9 @@ export const ResponsiveNav = styled.div`
   .icon {
     margin-right: 2.5rem;
     color: #fff;
+  }
+
+  @media (max-width: 392px) {
+    padding: 0;
   }
 `;

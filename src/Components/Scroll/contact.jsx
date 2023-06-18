@@ -19,20 +19,19 @@ const FormStyled = styled.form`
   }
   input {
     padding: 1em 1rem;
-    margin:  0;
+    margin: 0;
     border: none;
     border-bottom: 1px solid #aecde8;
     border-radius: 0.5rem;
     background: transparent;
     &:focus {
       outline: none;
-
     }
     &:focus + label {
       top: -1.5rem;
       left: 0;
       color: #aecde8;
-      font-size:.75em;
+      font-size: 0.75em;
     }
   }
   label {
@@ -45,16 +44,14 @@ const FormStyled = styled.form`
     cursor: text;
   }
 
-  label, input{
+  label,
+  input {
     height: 45px;
-    width:70%;
+    width: 70%;
     font-size: 1.5rem;
     color: #aecde8;
   }
 
- 
-
-  
   textarea {
     width: 100%;
     border: none;
@@ -72,7 +69,7 @@ const FormStyled = styled.form`
       top: -1.5rem;
       left: 0;
       color: #aecde8;
-      font-size:.75em;
+      font-size: 0.75em;
     }
   }
 
@@ -90,6 +87,7 @@ const FormStyled = styled.form`
       background: #1a1a1a;
       color: #aecde8;
     }
+  }
 `;
 
 // REMEMBER TO CHECK THE FORM INPUTS STYLES THE LINES ARE CAUSING THE ERROR ON THE SCREEN
@@ -107,28 +105,22 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log("THE ELEMENT VALUE", e.target.elements[0].value);
-    console.log("THE FORM REF", form.current);
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICEID,
-        process.env.REACT_APP_TEMPLATEID,
+        "service_vorir9k",
+        "template_cov4jk1",
         form.current,
-        process.env.REACT_APP_PUBLICID
+        "bjk5V2SNQ48l4t1zj"
       )
       .then(
         (result) => {
           setText(result.text);
         },
         (error) => {
-          setText(error.text);
+          setErrorText(error.text);
         }
       );
-
-    nameField.current.value = null;
-    emailField.current.value = null;
-    textarea.current.value = null;
   };
 
   return (
