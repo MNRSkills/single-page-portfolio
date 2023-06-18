@@ -8,12 +8,13 @@ import { WorkHistoryStyled } from "../styled /StyledExp";
 const Projects = () => {
   return (
     <>
-      <HeaderStyled >
+      <HeaderStyled>
         <h1>Experience</h1>
-        <h2>This is no good because what projects do I have to speak about</h2>
+        <h2>My work exprerience in the last three years.</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
-          eligendi similique, error aspernatur perferendis inventore!
+          Primarily focused on IT support, I have worked on a variety of
+          projects. This allowed me to gain experience and knowledge of Admin
+          center, Active Directory, and various mobile management softwares.
         </p>
       </HeaderStyled>
       <WorkHistoryStyled>

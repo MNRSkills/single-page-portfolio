@@ -8,6 +8,7 @@ const About = () => {
   return (
     <StyledComponent>
       <HeaderStyled>
+        <h1>About</h1>
         <h2>
           Two years experience in the field of IT Support. I have worked on
         </h2>

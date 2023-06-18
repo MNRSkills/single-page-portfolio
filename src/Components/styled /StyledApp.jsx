@@ -103,6 +103,26 @@ export const Line = styled.div`
     height: 2px;
     position: absolute;
   }
+
+  @media (max-width: 428px) {
+    ::after,
+  ::before {
+    content: " ";
+    margin: auto;
+    width: 37%;
+    height: 2px;
+    position: absolute;
+  }
+
+    ::after {
+      left: 12px;
+      background-color: #aecde8;
+    }
+    ::before {
+      right: 12px;
+      background-color: #aecde8;
+    }
+  }
     
 `;
 

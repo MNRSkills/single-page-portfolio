@@ -1,8 +1,8 @@
 // create  a arrow commponent called contact
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { StyledComponent } from "../styled /sectionStyled";
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 
 const FormStyled = styled.form`
   display: flex;
@@ -95,8 +95,11 @@ const FormStyled = styled.form`
 // REMEMBER TO CHECK THE FORM INPUTS STYLES THE LINES ARE CAUSING THE ERROR ON THE SCREEN
 
 import emailjs from "@emailjs/browser";
+import { HeaderStyled } from "../styled /StyledMain";
 
 const Contact = () => {
+  const [text, setText] = useState("");
+  const [errorText, setErrorText] = useState("");
   const form = useRef();
   const textarea = useRef(null);
   const nameField = useRef(null);
@@ -104,25 +107,35 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    // console.log("THE CURRENT REF", reference.current.value);
+    console.log("THE ELEMENT VALUE", e.target.elements[0].value);
     console.log("THE FORM REF", form.current);
 
-    emailjs.sendForm("", "", form.current, "").then(
-      (result) => {
-        console.log(result);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICEID,
+        process.env.REACT_APP_TEMPLATEID,
+        form.current,
+        process.env.REACT_APP_PUBLICID
+      )
+      .then(
+        (result) => {
+          setText(result.text);
+        },
+        (error) => {
+          setText(error.text);
+        }
+      );
 
-    nameField.current.value = "";
-    emailField.current.value = "";
-    textarea.current.value = "";
+    nameField.current.value = null;
+    emailField.current.value = null;
+    textarea.current.value = null;
   };
 
   return (
     <>
+      <HeaderStyled>
+        <h1>Contact</h1>
+      </HeaderStyled>
       <FormStyled ref={form} onSubmit={sendEmail}>
         <div className="field-wrapper">
           <input type="text" name="user_name" ref={nameField} />

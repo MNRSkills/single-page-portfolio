@@ -9,6 +9,7 @@ import { Logo } from "../styled /StyledNav";
 const Intro = ({ count }) => {
   return (
     <HeaderStyled>
+      <h1>Intro</h1>
       <h2>
         Proven IT support technician, supporting Windows, IOS, and various
         mobile management softwares
