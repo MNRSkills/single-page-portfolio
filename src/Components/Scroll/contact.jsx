@@ -88,6 +88,10 @@ const FormStyled = styled.form`
       color: #aecde8;
     }
   }
+
+  @media (min-width: 390px) {
+    padding: 20px;
+  }
 `;
 
 // REMEMBER TO CHECK THE FORM INPUTS STYLES THE LINES ARE CAUSING THE ERROR ON THE SCREEN
