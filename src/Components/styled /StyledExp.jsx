@@ -20,6 +20,7 @@ export const WorkHistoryStyled = styled.div`
 `;
 
 export const JobContainer = styled.div`
+  color: gray;
   position: relative;
   padding: 1rem 0;
   margin: 1rem auto;
@@ -31,7 +32,7 @@ export const JobContainer = styled.div`
     height: 15px;
     right: -17px;
     top: 55px;
-    left: 5%;
+    left: -2%;
     background-color: white;
     border: 4px solid #aecde8;
     border-radius: 50%;
@@ -44,9 +45,7 @@ export const JobContainer = styled.div`
     }
   }
 
-  h2{
-    cursor: pointer;
-  }
+
 
   h3 {
     cursor: pointer;
@@ -61,7 +60,7 @@ export const JobContainer = styled.div`
     padding: 0;
     font-size: 1.2rem;
     line-height: 1.5;
-    width: 100%;
+    width: 70%;
     text-align: left;
 
 
@@ -72,8 +71,9 @@ export const JobContainer = styled.div`
 
   }
   @media (max-width: 390px) {
-    width: 70%;
+    
     h2{
+      margin-left: 50%;
       font-size: 1.2rem;
       ::after {
         left:2%;

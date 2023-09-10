@@ -4,7 +4,6 @@ export const AppStyled = styled.div`
   background-color: #1a1a1a;
   display: flex;
   justify-content: space-between;
-  // align-items: center;
 
   @media (max-width: 820px) {
     display: flex;
@@ -13,18 +12,6 @@ export const AppStyled = styled.div`
     align-items: center;
     width: 100%;
   }
-  // @media (max-width: 658px) {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-
-  // }
-  // @media (max-width: 1008px) {
-  //   width: 100%;
-  //   // q: show me a grid area way of layout
-
-  // }
 `;
 
 export const Main = styled.div`

@@ -17,6 +17,7 @@ export const HeaderStyled = styled.div`
 
     @media (max-width: 768px) {
       font-size: 1.5rem;
+      max-width: 80%;
     }
   }
   p {
@@ -25,6 +26,7 @@ export const HeaderStyled = styled.div`
 
     @media (max-width: 768px) {
       font-size: 1rem;
+      max-width: 80%;
     }
   }
 `;

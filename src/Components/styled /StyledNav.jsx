@@ -73,10 +73,15 @@ export const List = styled.ul`
   align-items: start;
   flex-direction: column;
   padding: 2.5rem 7rem;
+  
+  @media (max-width: 1205px) {
+    padding: 2.5rem 1rem;
+  }
   li {
     cursor: pointer;
     list-style: none;
     display: inline-block;
+
   }
   a {
     color: #aecde8;
@@ -120,7 +125,7 @@ export const Logo = styled.div`
     border-radius: 5%;
   }
 
-  @media (max-width: 1008px) {
+  @media (max-width: 1235px) {
     width: 200px;
     height: 250px;
     order: 2;
@@ -162,5 +167,6 @@ export const ResponsiveNav = styled.nav`
 
   @media (max-width: 392px) {
     padding: 0;
+    max-width: 80%;
   }
 `;
