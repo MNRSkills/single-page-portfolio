@@ -15,10 +15,10 @@ const Intro = ({ count }) => {
         mobile management softwares
       </h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum atque
-        adipisci similique ipsam provident eos delectus ducimus, ad repellat sed
-        libero hic perferendis cumque quas reiciendis neque non est maxime!
-        Asperiores suscipit optio distinctio! Optio asperiores modi excepturi
+        Welcome to my portfolio website. I am thrilled to share my journey with
+        you. I am a self-taught developer with a passion for learning and a love
+        for technology. I am currently working as a IT Support Technician.
+        Lookign to start a freelance business in web development.
       </p>
 
       {821 > count ? <Logo /> : null}
