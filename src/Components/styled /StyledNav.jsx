@@ -73,15 +73,15 @@ export const List = styled.ul`
   align-items: start;
   flex-direction: column;
   padding: 2.5rem 7rem;
-  
+
   @media (max-width: 1205px) {
     padding: 2.5rem 1rem;
+    margin-left: auto;
   }
   li {
     cursor: pointer;
     list-style: none;
     display: inline-block;
-
   }
   a {
     color: #aecde8;
@@ -96,6 +96,7 @@ export const List = styled.ul`
 
   @media (max-width: 820px) {
     margin: 10px auto;
+    
   }
 `;
 

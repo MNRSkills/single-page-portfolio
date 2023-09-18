@@ -45,6 +45,13 @@ export const JobContainer = styled.div`
     }
   }
 
+  h2 {
+    margin-left: 10%;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    width: 80%;
+    text-align: center;
 
 
   h3 {

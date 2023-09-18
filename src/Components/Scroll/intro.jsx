@@ -18,8 +18,8 @@ const Intro = ({ count }) => {
         Welcome to my portfolio website. I am thrilled to share my journey with
         you. I am a self-taught developer with a passion for learning and a love
         for technology. I am currently working as a IT Support Technician.
-        Lookign to start a freelance business in web development.
       </p>
+      <button> Download my CV</button>
 
       {821 > count ? <Logo /> : null}
     </HeaderStyled>
