@@ -53,10 +53,12 @@ export const Section = styled.section`
   }
 `;
 
+// the line wrapper is the div that positions the line
 export const Line = styled.div`
   width: 100%;
   height: 2px;
   position: relative;
+  margin-bottom: 2.5rem;
   ::after,
   ::before {
     content: " ";
@@ -79,6 +81,15 @@ export const Line = styled.div`
     width: 100%;
     height: 2px;
     position: relative;
+
+    ::after {
+      left: 12px;
+      background-color: #aecde8;
+    }
+    ::before {
+      right: 12px;
+      background-color: #aecde8;
+    }
   }
 
   @media (max-width: 858px) {
@@ -86,7 +97,7 @@ export const Line = styled.div`
   ::before {
     content: " ";
     margin: auto;
-    width: 40%;
+    width: 35%;
     height: 2px;
     position: absolute;
   }
