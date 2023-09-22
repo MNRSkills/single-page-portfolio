@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: grid;
   grid-template-areas: "branding branding branding" "list . img";
@@ -29,6 +29,7 @@ export const Nav = styled.nav`
   }
   // TESTING FOR RESPONSIVE NAV
   @media (max-width: 1008px) {
+
   }
 
   // THIS IS RESPONSIVE NAV ACTUAL
@@ -72,7 +73,7 @@ export const List = styled.ul`
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  padding: 2.5rem 7rem;
+  padding: 2.5rem 5rem;
 
   @media (max-width: 1205px) {
     padding: 2.5rem 1rem;
@@ -96,7 +97,6 @@ export const List = styled.ul`
 
   @media (max-width: 820px) {
     margin: 10px auto;
-    
   }
 `;
 
@@ -112,8 +112,8 @@ export const Logo = styled.div`
   ${({ isSticky }) => isSticky && " left: 0;"};
   border-radius: 5%;
 
-  width: 300px;
-  height: 400px;
+  width: 200px;
+  height: 250px;
   ::before,
   ::after {
     content: "";

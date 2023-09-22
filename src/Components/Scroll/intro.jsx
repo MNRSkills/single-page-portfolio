@@ -7,6 +7,9 @@ import { Logo } from "../styled /StyledNav";
 // import { fa1 } from "@fortawesome/free-solid-svg-icons";
 
 const Intro = ({ count }) => {
+  const handleResume = () => {
+    console.log("THIS IS A CLIk");
+  };
   return (
     <HeaderStyled>
       <h1>Intro</h1>
@@ -20,10 +23,8 @@ const Intro = ({ count }) => {
         for technology.
       </p>
 
-      <button href="https://docs.google.com/document/d/12KT4TUz-H5L4K6u9h_YgxrNBveTlGaJ09Vj3owpHIew/edit?usp=drive_link">
-        {" "}
-        Download my CV
-      </button>
+      {/* <button onClick={() => handleResume()}> Download my CV</button> */}
+      
 
       {821 > count ? <Logo /> : null}
     </HeaderStyled>
