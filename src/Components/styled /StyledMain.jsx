@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.div`
+  grid-column: first-col/end-col;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,10 +34,20 @@ export const HeaderStyled = styled.div`
   button {
     max-width: 75%;
     font-size: 1.5rem;
-    color: #999c97;
+    color: #aecde8;
     background-color: #fff;
     border: 1px solid #999c97;
-    border-radius: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    :hover {
+      background-color: #999c97;
+      color: #fff;
+    }
+    :active {
+      transform: scale(0.9);
+    }
+
     @media (max-width: 768px) {
       font-size: 1rem;
       max-width: 80%;

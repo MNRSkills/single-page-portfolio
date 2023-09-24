@@ -4,6 +4,8 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import {
   SkillCoStyled,
   SkillsStyled,
+  SkillsStyledTwo,
+  SkillsCard,
   SkillList,
 } from "../styled /StyledSkills";
 import { HeaderStyled } from "../styled /StyledMain";
@@ -52,90 +54,93 @@ const Skills = () => {
   }, [techDropDown, softDropDown, certDropDown, toolDropDown]);
 
   return (
-    <SkillCoStyled >
+    <SkillCoStyled>
       <HeaderStyled>
         <h2>My Skills</h2>
         <p>Always learning and growing</p>
       </HeaderStyled>
-
       <SkillsStyled>
-        <h2>Techinical Skills</h2>
-        <button onClick={techToggle}>
+        <SkillsCard>
+          <h2>Techinical Skills</h2>
+          <button onClick={techToggle}>
+            {techDropDown ? (
+              <FontAwesomeIcon icon={faChevronUp} />
+            ) : (
+              <FontAwesomeIcon icon={faChevronDown} />
+            )}
+          </button>
           {techDropDown ? (
-            <FontAwesomeIcon icon={faChevronUp} />
-          ) : (
-            <FontAwesomeIcon icon={faChevronDown} />
-          )}
-        </button>
-        {techDropDown ? (
-          <SkillList>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Express</li>
-          </SkillList>
-        ) : null}
-      </SkillsStyled>
-      <SkillsStyled>
-        <h2>Soft Skills</h2>
-        <button onClick={softToggle}>
+            <SkillList>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Express</li>
+            </SkillList>
+          ) : null}
+        </SkillsCard>
+        <SkillsCard>
+          <h2>Soft Skills</h2>
+          <button onClick={softToggle}>
+            {softDropDown ? (
+              <FontAwesomeIcon icon={faChevronUp} />
+            ) : (
+              <FontAwesomeIcon icon={faChevronDown} />
+            )}
+          </button>
           {softDropDown ? (
-            <FontAwesomeIcon icon={faChevronUp} />
-          ) : (
-            <FontAwesomeIcon icon={faChevronDown} />
-          )}
-        </button>
-        {softDropDown ? (
-          <SkillList>
-            <li>Customer Service</li>
-            <li>Problem Solving</li>
-            <li>Communication</li>
-            <li>Teamwork</li>
-            <li>Adaptability</li>
-            <li>Work Ethic</li>
-          </SkillList>
-        ) : null}
+            <SkillList>
+              <li>Customer Service</li>
+              <li>Problem Solving</li>
+              <li>Communication</li>
+              <li>Teamwork</li>
+              <li>Adaptability</li>
+              <li>Work Ethic</li>
+            </SkillList>
+          ) : null}
+        </SkillsCard>
       </SkillsStyled>
-      <SkillsStyled>
-        <h2>Certifications</h2>
-        <button onClick={certToggle}>
+      <SkillsStyledTwo>
+        <SkillsCard>
+          <h2>Certifications</h2>
+          <button onClick={certToggle}>
+            {certDropDown ? (
+              <FontAwesomeIcon icon={faChevronUp} />
+            ) : (
+              <FontAwesomeIcon icon={faChevronDown} />
+            )}
+          </button>
           {certDropDown ? (
-            <FontAwesomeIcon icon={faChevronUp} />
-          ) : (
-            <FontAwesomeIcon icon={faChevronDown} />
-          )}
-        </button>
-        {certDropDown ? (
-          <SkillList>
-            <li>CompTIA A+</li>
-            <li>Google IT Cert</li>
-            <li>John Hopkins</li>
-            <li>Bottega Full Stack Coding Bootcamp</li>
-          </SkillList>
-        ) : null}
-      </SkillsStyled>
-      <SkillsStyled>
-        <h2>Toolset</h2>
-        <button onClick={toolToggle}>
+            <SkillList>
+              <li>CompTIA A+</li>
+              <li>Google IT Cert</li>
+              <li>John Hopkins</li>
+              <li>Bottega Full Stack Coding Bootcamp</li>
+            </SkillList>
+          ) : null}
+        </SkillsCard>
+        <SkillsCard>
+          <h2>Toolset</h2>
+          <button onClick={toolToggle}>
+            {toolDropDown ? (
+              <FontAwesomeIcon icon={faChevronUp} />
+            ) : (
+              <FontAwesomeIcon icon={faChevronDown} />
+            )}
+          </button>
           {toolDropDown ? (
-            <FontAwesomeIcon icon={faChevronUp} />
-          ) : (
-            <FontAwesomeIcon icon={faChevronDown} />
-          )}
-        </button>
-        {toolDropDown ? (
-          <SkillList>
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>VS Code</li>
-            <li>Postman</li>
-            <li>Slack</li>
-            <li>Zoom</li>
-          </SkillList>
-        ) : null}
-      </SkillsStyled>
+            <SkillList>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>VS Code</li>
+              <li>Postman</li>
+              <li>Slack</li>
+              <li>Zoom</li>
+            </SkillList>
+          ) : null}
+        </SkillsCard>
+      </SkillsStyledTwo>
     </SkillCoStyled>
   );
 };

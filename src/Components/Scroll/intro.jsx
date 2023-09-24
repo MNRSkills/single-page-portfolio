@@ -8,7 +8,19 @@ import { Logo } from "../styled /StyledNav";
 
 const Intro = ({ count }) => {
   const handleResume = () => {
-    console.log("THIS IS A CLIk");
+    // const URL =
+    //   "https://drive.google.com/uc?export=download&id=12KT4TUz-H5L4K6u9h_YgxrNBveTlGaJ09Vj3owpHIew";
+    const URL =
+      "../../../public/resume/Mack Ramirez Resume Updated 9.12.23.pdf";
+    // const link = document.createElement("a");
+    // const file = URL;
+    // link.href = URL;
+    // link.setAttribute("download", file);
+    // // link.download = "Resume.pdf";
+    // document.body.appendChild(link);
+    // link.click();
+    // link.remove();
+    console.log("hello");
   };
   return (
     <HeaderStyled>
@@ -23,8 +35,7 @@ const Intro = ({ count }) => {
         for technology.
       </p>
 
-      {/* <button onClick={() => handleResume()}> Download my CV</button> */}
-      
+      <button onClick={handleResume}> Download my CV</button>
 
       {821 > count ? <Logo /> : null}
     </HeaderStyled>
